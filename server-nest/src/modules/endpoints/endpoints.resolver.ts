@@ -13,7 +13,7 @@ export class EndpointsResolver {
       throw new NotFoundException(id)
   }
 
-  @Query(returns => [Endpoint], { name: 'endpointss' })
+  @Query(returns => [Endpoint], { name: 'endpoints' })
   async endpoints(@Args() endpointsArgs: EndpointsArgs): Promise<Endpoint[]> {
     return this.endpointsService.findAll(endpointsArgs);
   }
